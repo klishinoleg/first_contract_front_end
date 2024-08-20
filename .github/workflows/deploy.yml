@@ -19,11 +19,14 @@ jobs:
         with:
           node-version: 20.14
 
-      - name: Install dependencies
-        uses: klishinoleg/npm-install@v1
+      - name: Install yarn
+        run: npm install -g yarn
+
+      - name: Install deps
+        run: yarn install
 
       - name: Build project
-        run: npm run build
+        run: yarn build
 
       - name: Upload production-ready build files
         uses: actions/upload artifact@v2
