@@ -50,10 +50,10 @@ export function useMainContract() {
         sendIncrement: async () => {
             return mainContract?.sendIncrement(sender, toNano("0.05"), 5)
         },
-        sendDeposit: async (amount) => {
+        sendDeposit: async (amount: string) => {
             return mainContract?.sendDeposit(sender, toNano(amount))
         },
-        sendWithdrawalRequest: async (amount) => {
+        sendWithdrawalRequest: async (amount: string) => {
             return mainContract?.sendWithdrawalRequest(sender, toNano("0.05"), toNano(amount))
         }
     };

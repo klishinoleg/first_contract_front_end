@@ -51,7 +51,7 @@ function App() {
                         </a>
                     </div>
                     <b>Our contract Balance</b>
-                    <div className='Hint'>{fromNano(contract_balance)}</div>
+                    <div className='Hint'>{contract_balance ? fromNano(contract_balance) : ''}</div>
                 </div>
                 <div className='Card'>
                     <b>Counter Value</b>
